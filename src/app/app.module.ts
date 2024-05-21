@@ -28,7 +28,8 @@ import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
 import { CommonModule } from '@angular/common';
 import { EditarUsuarioComponent } from './vistas_usuarios/editar-usuario/editar-usuario.component';
-import { ClientesComponent } from './clientes/clientes.component';
+import { ClientesComponent } from './vistas_clientes/clientes/clientes.component';
+import { EditarClienteComponent } from './vistas_clientes/editar-cliente/editar-cliente.component';
 
 @NgModule({
     declarations: [
@@ -45,6 +46,7 @@ import { ClientesComponent } from './clientes/clientes.component';
         UsuariosComponent,
         EditarUsuarioComponent,
         ClientesComponent,
+        EditarClienteComponent,
     ],
     imports: [
         BrowserModule,

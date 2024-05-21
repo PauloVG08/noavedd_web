@@ -10,7 +10,7 @@ import { EstadoTransaccionRecargasComponent } from './recargas/estado-transaccio
 import { EstadoTransaccionServiciosComponent } from './servicios/estado-transaccion-servicios/estado-transaccion-servicios.component';
 import { UsuariosComponent } from './vistas_usuarios/usuarios/usuarios.component';
 import { EditarUsuarioComponent } from './vistas_usuarios/editar-usuario/editar-usuario.component';
-import { ClientesComponent } from './clientes/clientes.component';
+import { ClientesComponent } from './vistas_clientes/clientes/clientes.component';
 
 const routes: Routes = [
     { path: '', redirectTo: 'login', pathMatch: 'full' },
