@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ReactiveFormsModule } from '@angular/forms';
-import { faMobileAlt, faChargingStation } from '@fortawesome/free-solid-svg-icons';
+import { ModalModule  } from 'ngx-bootstrap/modal';
 
 //Importaciones de Módulos
 import { AppRoutingModule } from './app-routing.module';
@@ -28,6 +28,7 @@ import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
 import { CommonModule } from '@angular/common';
 import { EditarUsuarioComponent } from './vistas_usuarios/editar-usuario/editar-usuario.component';
+import { ClientesComponent } from './clientes/clientes.component';
 
 @NgModule({
     declarations: [
@@ -42,7 +43,8 @@ import { EditarUsuarioComponent } from './vistas_usuarios/editar-usuario/editar-
         EstadoTransaccionRecargasComponent,
         EstadoTransaccionServiciosComponent,
         UsuariosComponent,
-        EditarUsuarioComponent
+        EditarUsuarioComponent,
+        ClientesComponent,
     ],
     imports: [
         BrowserModule,
@@ -53,6 +55,7 @@ import { EditarUsuarioComponent } from './vistas_usuarios/editar-usuario/editar-
         FontAwesomeModule,
         MatTooltipModule,
         ReactiveFormsModule,
+        ModalModule.forRoot(),
         //Importaciones de Primeng
         ButtonModule,
         CommonModule,
@@ -62,7 +65,4 @@ import { EditarUsuarioComponent } from './vistas_usuarios/editar-usuario/editar-
     bootstrap: [AppComponent]
 })
 export class AppModule { 
-    constructor(library: FaIconLibrary) {
-        library.addIcons(faMobileAlt, faChargingStation);
-    }
 }

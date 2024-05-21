@@ -10,6 +10,7 @@ import { EstadoTransaccionRecargasComponent } from './recargas/estado-transaccio
 import { EstadoTransaccionServiciosComponent } from './servicios/estado-transaccion-servicios/estado-transaccion-servicios.component';
 import { UsuariosComponent } from './vistas_usuarios/usuarios/usuarios.component';
 import { EditarUsuarioComponent } from './vistas_usuarios/editar-usuario/editar-usuario.component';
+import { ClientesComponent } from './clientes/clientes.component';
 
 const routes: Routes = [
     { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -22,7 +23,8 @@ const routes: Routes = [
     { path: 'estado-recargas', component: EstadoTransaccionRecargasComponent },
     { path: 'estado-servicios', component: EstadoTransaccionServiciosComponent },
     { path: 'usuarios', component: UsuariosComponent },
-    { path: "editar-usuario", component: EditarUsuarioComponent },
+    { path: 'editar-usuario', component: EditarUsuarioComponent },
+    { path: 'clientes', component: ClientesComponent }
 ];
 
 @NgModule({

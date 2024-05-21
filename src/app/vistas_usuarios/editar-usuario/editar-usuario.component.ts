@@ -8,7 +8,10 @@ import { IconService } from 'src/app/servers/icon.service';
     styleUrls: ['./editar-usuario.component.scss']
 })
 export class EditarUsuarioComponent {
-    constructor(private router: Router, private iconService: IconService) {}
+    constructor(
+        private router: Router,
+        private iconService: IconService
+    ) {}
 
     camposCompletos: boolean = false;
     usuario: string = '';
@@ -22,6 +25,7 @@ export class EditarUsuarioComponent {
     celular: string = '';
     permisos: string = '';
     tipoUsuario: string = '';
+    mostrarModalEliminar = false;
     faPencilAlt = this.iconService.getIcon('faPencilAlt');
 
     ngOnInit() {
@@ -40,15 +44,7 @@ export class EditarUsuarioComponent {
         this.router.navigate(['/usuarios']);
     }
 
-    eliminarUsuario() {
-        console.log("Eliminando usuario");
-    }
-
     validarCampos() {
-        if (this.usuario && this.telefono && this.nombre && this.telefono2 && this.horario && this.apellidos && this.email && this.celular && this.permisos && this.tipoUsuario) {
-            this.camposCompletos = true;
-        } else {
-            this.camposCompletos = false;
-        }
+        this.camposCompletos = !!(this.usuario && this.telefono && this.nombre && this.telefono2 && this.horario && this.apellidos && this.email && this.celular && this.permisos && this.tipoUsuario);
     }
 }

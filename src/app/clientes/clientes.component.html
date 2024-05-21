@@ -1,0 +1,86 @@
+<div class="container">
+    <div class="row">
+        <h1><fa-icon [icon]="faUser"></fa-icon> Clientes</h1>
+    </div>
+    <div class="card shadow mb-4" id="spacesTable">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold"><fa-icon [icon]="faUser"></fa-icon> Listado de clientes</h6>
+        </div>
+        <div class="card-body">
+            <div class="scrollable-table" style="overflow: auto; max-height: 400px;">
+                <div class="row mb-3">
+                    <div class="campos">
+                        <fa-icon [icon]="faSearch"></fa-icon><input type="text" id="searchInput" class="form-control" placeholder="Buscar...">
+                        <select [(ngModel)]="rowsPerPage" class="form-control" (change)="updateTable()" id="searchRows">
+                        <option *ngFor="let option of rowsPerPageOptions" [value]="option">{{ option }}</option>
+                        </select>
+                    </div>
+                    <table id="clientesTable" class="table table-striped">
+                        <thead>
+                            <tr class="text-center">
+                                <th>Id</th>
+                                <th>Usuario</th>
+                                <th>Cliente</th>
+                                <th>Saldo</th>
+                                <th>Comisión</th>
+                                <th>Contacto/Desc</th>
+                                <th>Teléfono</th>
+                                <th>Hijos</th>
+                                <th>Abonar</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="text-center">
+                                <td>1</td>
+                                <td>Paulo123</td>
+                                <td>Cliente1</td>
+                                <td>$5000</td>
+                                <td>6.5</td>
+                                <td>Rocha</td>
+                                <td>4778521369</td>
+                                <td>Ver hijos</td>
+                                <td>Abonar</td>
+                                <td>
+                                    <a href="/editar-usuario">
+                                        <span class="tooltip-container">
+                                            <fa-icon [icon]="faPencilAlt" class="icon editar"></fa-icon>
+                                            <span class="tooltip-text">Editar</span>
+                                        </span>
+                                    </a>
+                                    <span class="tooltip-container">
+                                        <fa-icon [icon]="faTrashAlt" class="icon eliminar"></fa-icon>
+                                        <span class="tooltip-text">Eliminar</span>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr class="text-center">
+                                <td>2</td>
+                                <td>CobroUDP</td>
+                                <td>Cliente2</td>
+                                <td>$5000</td>
+                                <td>6.5</td>
+                                <td>Francisco</td>
+                                <td>987654321</td>
+                                <td>Ver hijos</td>
+                                <td>Abonar</td>
+                                <td>
+                                    <a href="/editar-usuario">
+                                        <span class="tooltip-container">
+                                            <fa-icon [icon]="faPencilAlt" class="icon editar"></fa-icon>
+                                            <span class="tooltip-text">Editar</span>
+                                        </span>
+                                    </a>
+                                    <span class="tooltip-container">
+                                        <fa-icon [icon]="faTrashAlt" class="icon eliminar"></fa-icon>
+                                        <span class="tooltip-text">Eliminar</span>
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
