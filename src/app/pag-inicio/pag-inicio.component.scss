@@ -1,0 +1,142 @@
+.custom-navbar {
+    background-color: #270F40;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.8);
+    position: fixed;
+    z-index: 10000;
+    width: 100%;
+    top: 0;
+}
+
+.custom-navbar .navbar-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.custom-navbar .navbar-nave {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 12px;
+}
+
+.custom-navbar .navbar-nave .nav-item {
+    margin-left: 20px;
+}
+
+.custom-navbar .navbar-brand,
+.custom-navbar .nav-link {
+    color: #F2F2F2;
+}
+
+.custom-navbar .navbar-toggler-icon {
+    background-color: #F2F2F2;
+}
+
+.custom-navbar .nav-item.active.dropdown:hover .dropdown-menu,
+.custom-navbar .dropdown-menu:hover {
+    display: block;
+}
+
+.custom-navbar .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #270F40;
+    z-index: 1000;
+    padding: 10px;
+    border-radius: 5px;
+    top: 100%;
+    left: 0;
+}
+
+.custom-navbar .dropdown-item {
+    color: white;
+    padding: 5px 0;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+}
+
+.custom-navbar .dropdown-item:hover {
+    background-color: transparent;
+}
+
+.custom-navbar .nav-item.active > .nav-link {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    height: 100%;
+}
+
+.custom-navbar .dropdown-item a {
+    text-decoration: none;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    opacity: 0.7;
+}
+
+a {
+    color: #F2F2F2;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+.custom-navbar .collapse {
+    display: none !important;
+}
+
+.custom-navbar .show {
+    display: flex !important;
+}
+
+@media (max-width: 768px) {
+    .custom-navbar .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        margin-top: 10px;
+    }
+
+    .custom-navbar .navbar-nav .nav-item {
+        width: 100%;
+        text-align: center;
+    }
+
+    .custom-navbar .navbar-collapse {
+        display: none;
+    }
+
+    .custom-navbar .navbar-collapse.show {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #270F40;
+        border-radius: 5px;
+        padding: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.8);
+        z-index: 1000;
+    }
+
+    .custom-navbar .navbar-collapse.show .nav-item {
+        margin-bottom: 10px;
+    }
+
+    .custom-navbar .navbar-toggler {
+        display: block;
+    }
+}

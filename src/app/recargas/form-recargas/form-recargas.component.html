@@ -1,0 +1,39 @@
+<div class="form-container">
+    <img src="../../../assets/images/telcel.png" alt="imagen_compania" class="imagen_compania">
+    <div class="radio-input">
+        <input value="value-1" name="value-radio" id="value-1" type="radio" [(ngModel)]="paqueteSeleccionado" (ngModelChange)="validarCampos()">
+        <label for="value-1">Paquete 1</label>
+        <input value="value-2" name="value-radio" id="value-2" type="radio" [(ngModel)]="paqueteSeleccionado" (ngModelChange)="validarCampos()">
+        <label for="value-2">Paquete 2</label>
+        <input value="value-3" name="value-radio" id="value-3" type="radio" [(ngModel)]="paqueteSeleccionado" (ngModelChange)="validarCampos()">
+        <label for="value-3">Paquete 3</label>
+        <input value="value-4" name="value-radio" id="value-4" type="radio" [(ngModel)]="paqueteSeleccionado" (ngModelChange)="validarCampos()">
+        <label for="value-4">Paquete 4</label>
+    </div>
+    <div class="input-wrapper">
+        <input type="text" placeholder="Producto" name="producto" class="input" [(ngModel)]="producto" (input)="validarCampos()">
+        <label class="placeholder">Producto</label>
+    </div>
+    <div class="input-wrapper">
+        <input type="text" placeholder="Número" name="numero" class="input" [(ngModel)]="numero" (input)="validarCampos()">
+        <label class="placeholder">Número</label>
+    </div>
+    <div class="input-wrapper">
+        <input type="text" placeholder="Confirmar número" name="confirmarNumero" class="input" [(ngModel)]="confirmarNumero" (input)="validarCampos()">
+        <label class="placeholder">Confirmar número</label>
+    </div>
+    <div class="input-wrapper">
+        <select name="monto" class="input" [(ngModel)]="monto" (change)="validarCampos()">
+            <option value="">Seleccione un monto</option>
+            <option value="10">$10</option>
+            <option value="20">$20</option>
+            <option value="30">$30</option>
+        </select>
+        <label class="placeholder">Monto</label>
+    </div>
+    <div class="input-wrapper">
+        <button class="cssbuttons-io-button" (click)="estadoTransaccion()" [disabled]="!camposCompletos">
+            <span>Recargar</span>
+        </button>
+    </div>
+</div>

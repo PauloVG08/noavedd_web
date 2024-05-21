@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row">
+        <div>
+            <h1>Estado de transacción</h1>
+        </div>
+    </div>
+</div>
+<div class="input-wrapper">
+    <input type="text" name="text" class="input" readonly>
+    <label class="placeholder">Respuesta</label>
+</div>  
+<!-- Aqui debe de aparecer el archivo pdf a descargar -->
+<div class="input-wrapper">
+    <i class="pi pi-file-pdf" style="font-size: 50px; color: red;"></i>
+    <a href="ruta/del/archivo.pdf" download="nombre-del-archivo.pdf" class="pdf-link">
+        Imprimir ticket
+    </a>
+</div>
+<!--  -->
+<div class="input-wrapper">
+    <input type="text" name="text" class="input" readonly>
+    <label class="placeholder">RCode</label>
+</div> 
+<div class="input-wrapper">
+    <input type="text" name="text" class="input" readonly>
+    <label class="placeholder">SName</label>
+</div> 
+<div class="input-wrapper">
+    <input type="text" name="text" class="input" readonly>
+    <label class="placeholder">Autorización</label>
+</div> 
+<div class="input-wrapper">
+    <input type="text" name="text" class="input" readonly>
+    <label class="placeholder">Carrier</label>
+</div> 
+<div class="input-wrapper">
+    <input type="text" name="text" class="input" readonly>
+    <label class="placeholder">Número</label>
+</div> 
+<div class="input-wrapper">
+    <input type="text" name="text" class="input" readonly>
+    <label class="placeholder">Monto</label>
+</div> 
+<div class="input-wrapper">
+    <button class="cssbuttons-io-button" (click)="terminarTransaccion()">
+        <span>Terminar</span>
+    </button>
+</div>

@@ -1,0 +1,115 @@
+.container {
+    width: 100%;
+    height: 100%;
+    margin-top: 100px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    height: 20vh;
+}
+
+.row fa-icon {
+    margin-right: 5px; 
+}
+
+h1 {
+    font-family: 'Arial', sans-serif; 
+    color: #fff; 
+    background-color: #371559;  
+    border-radius: 20px; 
+    padding: 20px 40px; 
+    text-align: center; 
+}
+
+#searchInput {
+    border: solid 2px #371559;
+    width: 500px;
+    outline: none;
+}
+
+#searchInput:focus {
+    outline: 3px solid #9160A6;
+}
+
+#searchRows {
+    border: solid 2px #371559;
+    width: 200px;
+    outline: none;
+}
+
+#searchRows:focus {
+    outline: 3px solid #9160A6;
+}
+
+.campos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; 
+}
+
+.form-control {
+    margin-bottom: 0; 
+}
+
+.fa-icon {
+    font-size: 48px; /* Tamaño de fuente para los iconos */
+    cursor: pointer; /* Cambia el cursor a puntero al pasar por encima del icono */
+}
+
+.editar {
+    font-size: 20px;
+    color: #FFD700; 
+}
+
+.eliminar {
+    font-size: 20px;
+    color: #FF6347; 
+}
+
+.icon-container {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.tooltip-container {
+    position: relative; 
+    display: inline-block; 
+    cursor: pointer; 
+}
+
+.tooltip-container .tooltip-text {
+    visibility: hidden; 
+    width: 80px; 
+    background-color: #555; 
+    color: #fff; 
+    text-align: center; 
+    border-radius: 6px; 
+    padding: 5px 0; 
+    position: absolute; 
+    z-index: 1; 
+    bottom: 125%; 
+    left: 50%; 
+    margin-left: -40px; 
+    opacity: 0; 
+    transition: opacity 0.3s; 
+}
+
+.tooltip-container .tooltip-text::after {
+    content: ""; 
+    position: absolute; 
+    top: 100%; 
+    left: 50%; 
+    margin-left: -5px; 
+    border-width: 5px; 
+    border-style: solid; 
+    border-color: #555 transparent transparent transparent; 
+}
+
+.tooltip-container:hover .tooltip-text {
+    visibility: visible; 
+    opacity: 1; 
+}

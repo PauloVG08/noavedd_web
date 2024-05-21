@@ -1,0 +1,107 @@
+<nav class="navbar navbar-expand-md custom-navbar fixed-top">
+    <a href="/bienvenida"><img src="/assets/images/logon.jpeg" class="rounded-circle" alt="logo"></a>
+    <button class="navbar-toggler" (click)="toggleNavbar()">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Contenido del NavBar -->
+    <div [ngClass]="{'show': isNavbarCollapsed, 'collapse': !isNavbarCollapsed}" style="width: 100%;">
+        <ul class="navbar-nav">
+            <li class="nav-item active dropdown">
+                <a class="nav-link">
+                    <i class="pi pi-dollar" style="color: white;"></i> Ventas
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a href="/recargas"><i class="pi pi-mobile" style="color: white;"></i> Recargas</a></li>
+                        <li class="dropdown-item"><a href="/servicios"><i class="pi pi-credit-card" style="color: white;"></i> Servicios</a></li>
+                    </ul>
+                </a>
+            </li> 
+            <li class="nav-item active dropdown">
+                <a class="nav-link">
+                    <i class="pi pi-address-book" style="color: white;"></i> Administración
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a href="/usuarios"><i class="pi pi-users" style="color: white;"></i> Usuarios</a></li>
+                        <li class="dropdown-item"><a href="#"><i class="pi pi-user" style="color: white;"></i> Clientes</a></li>
+                        <li class="dropdown-item"><a href="#"><i class="pi pi-link" style="color: white;"></i> Conectores</a></li>
+                        <li class="dropdown-item"><a href="#"><i class="pi pi-cog" style="color: white;"></i> Modulos</a></li>
+                        <li class="dropdown-item"><a href="#"><i class="pi pi-key" style="color: white;"></i> Resetear contraseña</a></li>
+                        <li class="dropdown-item"><a href="#"><i class="pi pi-money-bill" style="color: white;"></i> Pagos</a></li>
+                        <li class="dropdown-item"><a href="#"><i class="pi pi-envelope" style="color: white;"></i> Contactos</a></li>
+                        <li class="dropdown-item"><a href="#"><i class="pi pi-clock" style="color: white;"></i> Transacciones pendientes</a></li>
+                    </ul>
+                </a>
+            </li>
+            <li class="nav-item active dropdown">
+                <a class="nav-link">
+                    <i class="pi pi-list" style="color: white;"></i> Otros
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a href="#"><i class="pi pi-chart-line" style="color: white;"></i> Monitor ventas</a></li>
+                    </ul>
+                </a>
+            </li>
+            <li class="nav-item active dropdown">
+                <a class="nav-link">
+                    <i class="pi pi-cog" style="color: white;"></i> Configuración
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a href="#"><i class="pi pi-money-bill" style="color: white;"></i> Bancos</a></li>
+                        <li class="dropdown-item"><a href="#"><i class="pi pi-credit-card" style="color: white;"></i> Cuentas Bancarias</a></li>
+                        <li class="dropdown-item"><a href="#"><i class="pi pi-clock" style="color: white;"></i> Horarios</a></li>
+                        <li class="dropdown-item"><a href="#"><i class="pi pi-users" style="color: white;"></i> Perfiles</a></li>
+                        <li class="dropdown-item"><a href="#"><i class="pi pi-bell" style="color: white;"></i> Anuncios</a></li>
+                        <li class="dropdown-item"><a href="#"><i class="pi pi-briefcase" style="color: white;"></i> Carriers Operadores</a></li>
+                        <li class="dropdown-item"><a href="#"><i class="pi pi-map-marker" style="color: white;"></i> Regiones Telcel</a></li>
+                        <li class="dropdown-item"><a href="#"><i class="pi pi-envelope" style="color: white;"></i> Sepomex</a></li>
+                        <li class="dropdown-item"><a href="#"><i class="pi pi-tags" style="color: white;"></i> SKUs</a></li>
+                        <li class="dropdown-item"><a href="#"><i class="pi pi-cog" style="color: white;"></i> Parámetros</a></li>
+                        <li class="dropdown-item"><a href="#"><i class="pi pi-desktop" style="color: white;"></i> Sistema</a></li>
+                    </ul>
+                </a>
+            </li>
+            <li class="nav-item active dropdown">
+                <a class="nav-link"><i class="pi pi-clipboard" style="color: white;"></i> 
+                Reportes
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a href="#"><i class="pi pi-dollar" style="color: white;"></i> Transacciones</a></li>
+                        <li class="dropdown-item"><a href="#"><i class="pi pi-users" style="color: white;"></i> Clientes</a></li>
+                        <li class="dropdown-item"><a href="#"><i class="pi pi-money-bill" style="color: white;"></i> Abono a Clientes</a></li>
+                        <li class="dropdown-item"><a href="#"><i class="pi pi-link" style="color: white;"></i> Conectores</a></li>
+                        <li class="dropdown-item"><a href="#"><i class="pi pi-user" style="color: white;"></i> Propietarios</a></li>
+                        <li class="dropdown-item"><a href="#"><i class="pi pi-chart-bar" style="color: white;"></i> Propietarios Gráficos</a></li>
+                        <li class="dropdown-item"><a href="#"><i class="pi pi-clock" style="color: white;"></i> Transacciones Pendientes</a></li>
+                        <li class="dropdown-item"><a href="#"><i class="pi pi-shield" style="color: white;"></i> Conciliación</a></li>
+                        <li class="dropdown-item"><a href="#"><i class="pi pi-user-plus" style="color: white;"></i> Vendedores</a></li>
+                        <li class="dropdown-item"><a href="#"><i class="pi pi-arrows-h" style="color: white;"></i> Trans X Conector</a></li>
+                        <li class="dropdown-item"><a href="#"><i class="pi pi-exclamation-triangle" style="color: white;"></i> Trans Error</a></li>
+                    </ul>
+                </a>
+            </li>
+            <li class="nav-item active dropdown">
+                <a class="nav-link">
+                    <i class="pi pi-info" style="color: white;"></i> Información
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a href="#"><i class="pi pi-briefcase" style="color: white;"></i> Empresa</a></li>
+                        <li class="dropdown-item"><a href="#"><i class="pi pi-link" style="color: white;"></i> Conectores</a></li>
+                    </ul>
+                </a>
+            </li>            
+        </ul>
+        <!-- Alinear a la derecha -->
+        <!-- <div class="ml-auto"> -->
+            <!-- <ul class="navbar-nav nueva"> -->
+            <ul class="navbar-nave">
+                <li class="nav-item">
+                    <a class="nav-link">
+                        <i class="pi pi-chart-bar" style="color: white;"></i>
+                        Balance: <span style="background-color: #9160A6; padding: 5px; border-radius: 5px;">$3000,000.00</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">
+                        <i class="pi pi-sign-out" style="color: white;"></i>
+                        Cerrar sesión
+                    </a>
+                </li>
+            </ul>
+        <!-- </div> -->
+    </div>
+</nav>

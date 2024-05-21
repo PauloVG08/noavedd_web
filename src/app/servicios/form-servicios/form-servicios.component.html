@@ -1,0 +1,27 @@
+<div class="form-container">
+    <img src="../../../assets/images/cfe.png" alt="imagen_compania" class="imagen_compania">
+    <div class="input-wrapper">
+        <input type="text" placeholder="Número de referencia" name="text" class="input" [(ngModel)]="numReferncia" (input)="validarCampos()">
+        <label class="placeholder">Número de referencia</label>
+    </div>
+    <div class="input-wrapper">
+        <input type="text" placeholder="Confirmar referencia" name="text" class="input" [(ngModel)]="confirmarReferencia" (input)="validarCampos()">
+        <label class="placeholder">Confirmar referencia</label>
+    </div>
+    <div class="radio-input">
+        <input value="value-1" name="value-radio" id="value-1" type="radio" [(ngModel)]="paqueteSeleccionado" (change)="validarCampos()">
+        <label for="value-1">Paquete 1</label>
+    </div>
+    <div class="input-wrapper">
+        <input type="text" placeholder="Monto entre 10 y 8500" name="text" class="input" [(ngModel)]="monto" (input)="validarCampos()">
+        <label class="placeholder">Monto entre 10 y 8500</label>
+    </div>
+    <div class="button-container">
+        <a href="/servicios" class="cssbuttons-io-button volver-button">
+            <span>Volver</span>
+        </a>
+        <button class="cssbuttons-io-button pagar-button" (click)="estadoTransaccion()" [disabled]="!camposCompletos">
+            <span>Pagar</span>
+        </button>
+    </div>
+</div>

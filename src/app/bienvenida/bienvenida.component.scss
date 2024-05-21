@@ -1,0 +1,43 @@
+h1 {
+    color: #471A73;
+    text-align: center;
+    font-size: 28px; /* Tamaño de fuente para dispositivos grandes */
+}
+
+p {
+    font-size: 16px; /* Tamaño de fuente para dispositivos grandes */
+    line-height: 1.5;
+    text-align: center;
+}
+
+.img-container {
+    max-width: 100%;
+    text-align: center;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    margin: 0 auto; /* Centrar la imagen horizontalmente */
+    max-height: 300px; /* Altura máxima para la imagen */
+}
+
+@media (max-width: 768px) { /* Estilos para dispositivos pequeños */
+    h1 {
+        font-size: 24px; /* Reducir el tamaño de fuente */
+    }
+
+    p {
+        font-size: 14px; /* Reducir el tamaño de fuente */
+    }
+
+    .img-container {
+        max-width: 80%; /* Reducir el ancho del contenedor de la imagen */
+        margin: 0 auto; /* Centrar el contenedor de la imagen */
+    }
+
+    .img-fluid {
+        max-width: 100%;
+    }
+}
