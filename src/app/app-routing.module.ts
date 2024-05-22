@@ -13,6 +13,7 @@ import { EditarUsuarioComponent } from './vistas_usuarios/editar-usuario/editar-
 import { ClientesComponent } from './vistas_clientes/clientes/clientes.component';
 import { EditarClienteComponent } from './vistas_clientes/editar-cliente/editar-cliente.component';
 import { ConectoresComponent } from './conectores/conectores.component';
+import { ModulosComponent } from './modulos/modulos.component';
 
 const routes: Routes = [
     { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -29,6 +30,7 @@ const routes: Routes = [
     { path: 'clientes', component: ClientesComponent },
     { path: 'editar-cliente', component: EditarClienteComponent },
     { path: 'conectores', component: ConectoresComponent },
+    { path: 'modulos', component: ModulosComponent }
 ];
 
 @NgModule({

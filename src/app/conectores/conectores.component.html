@@ -7,14 +7,23 @@
             <h6 class="m-0 font-weight-bold"><fa-icon [icon]="faPlug"></fa-icon> Listado de conectores</h6>
         </div>
         <div class="card-body">
-            <div class="scrollable-table" style="overflow: auto; max-height: 400px;">
+            <div class="campos">
+                <fa-icon [icon]="faSearch"></fa-icon><input type="text" id="searchInput" class="form-control" placeholder="Buscar...">
+                <select [(ngModel)]="rowsPerPage" class="form-control" (change)="updateTable()" id="searchRows">
+                  <option *ngFor="let option of rowsPerPageOptions" [value]="option">{{ option }}</option>
+                </select>
+                <ul class="example-2">
+                    <li class="icon-content">
+                        <a href="#" aria-label="Agregar" data-social="agregar">
+                            <div class="filled"></div>
+                            <fa-icon [icon]="faPlus"></fa-icon>
+                        </a>
+                        <div class="tooltip">Agregar</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="scrollable-table" style="overflow: auto; max-height: calc(100vh - 40px);">
                 <div class="row mb-3">
-                    <div class="campos">
-                        <fa-icon [icon]="faSearch"></fa-icon><input type="text" id="searchInput" class="form-control" placeholder="Buscar...">
-                        <select [(ngModel)]="rowsPerPage" class="form-control" (change)="updateTable()" id="searchRows">
-                          <option *ngFor="let option of rowsPerPageOptions" [value]="option">{{ option }}</option>
-                        </select>
-                    </div>
                     <table id="usuariosTable" class="table table-striped">
                         <thead>
                             <tr class="text-center">
@@ -38,58 +47,86 @@
                                 <td>10</td>
                                 <td>$271,381.22</td>
                                 <td>$0.00</td>
-                                <td>4776009669</td>
+                                <td>
+                                    <div class="toggle-border">
+                                        <input id="one" type="checkbox">
+                                        <label for="one">
+                                            <div class="handle"></div>
+                                        </label>
+                                    </div>
+                                </td>
                                 <td>Todas</td>
                                 <td>20</td>
                                 <td>8.000</td>
                                 <td>Activo</td>
                                 <td>
-                                    <a href="/editar-usuario">
-                                        <span class="tooltip-container">
-                                            <fa-icon [icon]="faCreditCard" class="icon abonar"></fa-icon>
-                                            <span class="tooltip-text">Abonar</span>
-                                        </span>
-                                    </a>
-                                    <a href="/editar-usuario">
-                                        <span class="tooltip-container">
-                                            <fa-icon [icon]="faPencilAlt" class="icon editar"></fa-icon>
-                                            <span class="tooltip-text">Editar</span>
-                                        </span>
-                                    </a>
-                                    <span class="tooltip-container">
-                                        <fa-icon [icon]="faTrashAlt" class="icon eliminar"></fa-icon>
-                                        <span class="tooltip-text">Eliminar</span>
-                                    </span>
+                                    <ul class="example-2">
+                                        <li class="icon-content">
+                                            <a href="#" aria-label="Abonar" data-social="abonar">
+                                                <div class="filled"></div>
+                                                <fa-icon [icon]="faCreditCard"></fa-icon>
+                                            </a>
+                                            <div class="tooltip">Abonar</div>
+                                        </li>
+                                        <li class="icon-content">
+                                            <a href="/editar-usuario" aria-label="Editar" data-social="editar">
+                                                <div class="filled"></div>
+                                                <fa-icon [icon]="faPencilAlt"></fa-icon>
+                                            </a>
+                                            <div class="tooltip">Editar</div>
+                                        </li>
+                                        <li class="icon-content">
+                                            <a href="#" aria-label="Eliminar" data-social="eliminar">
+                                                <div class="filled"></div>
+                                                <fa-icon [icon]="faTrashAlt"></fa-icon>
+                                            </a>
+                                            <div class="tooltip">Eliminar</div>
+                                        </li>
+                                    </ul>
                                 </td>
                             </tr>
                             <tr class="text-center">
-                                <td>1</td>
+                                <td>2</td>
                                 <td>RecargaT</td>
                                 <td>10</td>
                                 <td>$351,381.22</td>
                                 <td>$0.00</td>
-                                <td>4771234567</td>
+                                <td>
+                                    <div class="toggle-border">
+                                        <input id="two" type="checkbox">
+                                        <label for="two">
+                                            <div class="handle"></div>
+                                        </label>
+                                    </div>
+                                </td>
                                 <td>Todas</td>
                                 <td>20</td>
                                 <td>8.000</td>
                                 <td>Activo</td>
                                 <td>
-                                    <a href="/editar-usuario">
-                                        <span class="tooltip-container">
-                                            <fa-icon [icon]="faCreditCard" class="icon abonar"></fa-icon>
-                                            <span class="tooltip-text">Abonar</span>
-                                        </span>
-                                    </a>
-                                    <a href="/editar-usuario">
-                                        <span class="tooltip-container">
-                                            <fa-icon [icon]="faPencilAlt" class="icon editar"></fa-icon>
-                                            <span class="tooltip-text">Editar</span>
-                                        </span>
-                                    </a>
-                                    <span class="tooltip-container">
-                                        <fa-icon [icon]="faTrashAlt" class="icon eliminar"></fa-icon>
-                                        <span class="tooltip-text">Eliminar</span>
-                                    </span>
+                                    <ul class="example-2">
+                                        <li class="icon-content">
+                                            <a href="#" aria-label="Abonar" data-social="abonar">
+                                                <div class="filled"></div>
+                                                <fa-icon [icon]="faCreditCard"></fa-icon>
+                                            </a>
+                                            <div class="tooltip">Abonar</div>
+                                        </li>
+                                        <li class="icon-content">
+                                            <a href="/editar-usuario" aria-label="Editar" data-social="editar">
+                                                <div class="filled"></div>
+                                                <fa-icon [icon]="faPencilAlt"></fa-icon>
+                                            </a>
+                                            <div class="tooltip">Editar</div>
+                                        </li>
+                                        <li class="icon-content">
+                                            <a href="#" aria-label="Eliminar" data-social="eliminar">
+                                                <div class="filled"></div>
+                                                <fa-icon [icon]="faTrashAlt"></fa-icon>
+                                            </a>
+                                            <div class="tooltip">Eliminar</div>
+                                        </li>
+                                    </ul>
                                 </td>
                             </tr>
                         </tbody>

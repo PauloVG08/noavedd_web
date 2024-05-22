@@ -14,20 +14,15 @@ interface Conector {
 }
 
 @Component({
-    selector: 'app-conectores',
-    templateUrl: './conectores.component.html',
-    styleUrls: ['./conectores.component.scss']
+    selector: 'app-modulos',
+    templateUrl: './modulos.component.html',
+    styleUrls: ['./modulos.component.scss']
 })
-export class ConectoresComponent {
-    constructor(private iconService: IconService) { }
+export class ModulosComponent {
+    constructor(public iconService: IconService) { }
 
-    //Iconos
+    faCubes = this.iconService.getIcon('faCubes');
     faSearch = this.iconService.getIcon('faSearch');
-    faUser = this.iconService.getIcon('faUser');
-    faPencilAlt = this.iconService.getIcon('faPencilAlt');
-    faTrashAlt = this.iconService.getIcon('faTrashAlt');
-    faPlug = this.iconService.getIcon('faPlug');
-    faCreditCard = this.iconService.getIcon('faCreditCard');
     faPlus = this.iconService.getIcon('faPlus');
 
     conectores: Conector[] = [

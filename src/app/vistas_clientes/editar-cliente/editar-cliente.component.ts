@@ -41,7 +41,8 @@ export class EditarClienteComponent {
     }
 
     volverPagina() {
-        this.router.navigate(['/usuarios']);
+        console.log("Volver pagina");
+        this.router.navigate(['/clientes']);
     }
 
     validarCampos() {

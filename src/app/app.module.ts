@@ -31,6 +31,7 @@ import { EditarUsuarioComponent } from './vistas_usuarios/editar-usuario/editar-
 import { ClientesComponent } from './vistas_clientes/clientes/clientes.component';
 import { EditarClienteComponent } from './vistas_clientes/editar-cliente/editar-cliente.component';
 import { ConectoresComponent } from './conectores/conectores.component';
+import { ModulosComponent } from './modulos/modulos.component';
 
 @NgModule({
     declarations: [
@@ -49,6 +50,7 @@ import { ConectoresComponent } from './conectores/conectores.component';
         ClientesComponent,
         EditarClienteComponent,
         ConectoresComponent,
+        ModulosComponent,
     ],
     imports: [
         BrowserModule,
