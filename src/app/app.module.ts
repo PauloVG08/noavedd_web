@@ -30,6 +30,7 @@ import { CommonModule } from '@angular/common';
 import { EditarUsuarioComponent } from './vistas_usuarios/editar-usuario/editar-usuario.component';
 import { ClientesComponent } from './vistas_clientes/clientes/clientes.component';
 import { EditarClienteComponent } from './vistas_clientes/editar-cliente/editar-cliente.component';
+import { ConectoresComponent } from './conectores/conectores.component';
 
 @NgModule({
     declarations: [
@@ -47,6 +48,7 @@ import { EditarClienteComponent } from './vistas_clientes/editar-cliente/editar-
         EditarUsuarioComponent,
         ClientesComponent,
         EditarClienteComponent,
+        ConectoresComponent,
     ],
     imports: [
         BrowserModule,

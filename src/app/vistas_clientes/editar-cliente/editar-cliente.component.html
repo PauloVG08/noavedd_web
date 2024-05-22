@@ -1,1 +1,116 @@
-<p>editar-cliente works!</p>
+<div class="container">
+    <div class="row">
+        <h1><fa-icon [icon]="faPencilAlt" class="icon editar"></fa-icon> Editar cliente</h1>
+    </div>
+</div>
+<div class="form-container">
+    <form (ngSubmit)="onSubmit()" novalidate>
+        <div class="form-row">
+                <div class="input-wrapper">
+                    <input type="text" placeholder="Nombre*" name="nombre" class="input" [(ngModel)]="nombre" (input)="validarCampos()">
+                    <label class="placeholder">Nombre</label>
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" placeholder="Email*" name="email" class="input" [(ngModel)]="email" (input)="validarCampos()">
+                    <label class="placeholder">Email</label>
+                </div>
+                <div class="input-wrapper">
+                    <textarea placeholder="Dirección*" name="direccion" class="input" [(ngModel)]="direccion" (input)="validarCampos()"></textarea>
+                    <label class="placeholder">Dirección</label>
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" placeholder="Contacto*" name="contacto" class="input" [(ngModel)]="contacto" (input)="validarCampos()">
+                    <label class="placeholder">Contacto</label>
+                </div>
+            </div>  
+            <div class="form-row">
+                <div class="input-wrapper">
+                    <input type="text" placeholder="Teléfono*" name="telefono" class="input" [(ngModel)]="telefono" (input)="validarCampos()">
+                    <label class="placeholder">Teléfono</label>
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" placeholder="RFC*" name="rfc" class="input" [(ngModel)]="rfc" (input)="validarCampos()">
+                    <label class="placeholder">RFC</label>
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" placeholder="Monto Máximo a Abonar*" name="monto_maximo" class="input" [(ngModel)]="monto_maximo" (input)="validarCampos()">
+                    <label class="placeholder">Monto Máximo a Abonar</label>
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" placeholder="Los últimos días*" name="ul_dias" class="input" [(ngModel)]="ul_dias" (input)="validarCampos()">
+                    <label class="placeholder">Los últimos días</label>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="input-wrapper">
+                    <input type="text" placeholder="Comisión % (TA)*" name="comision" class="input" [(ngModel)]="comision_ta" (input)="validarCampos()">
+                    <label class="placeholder">Comisión % (TA)</label>
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" placeholder="Comisión % (TA)*" name="comision" class="input" [(ngModel)]="comision_ser" (input)="validarCampos()">
+                    <label class="placeholder">Comisión % (TA)</label>
+                </div>
+                <div class="input-wrapper">
+                    <select name="vendedor" class="input" [(ngModel)]="vendedor" (change)="validarCampos()">
+                    <option value="">Seleccione un tipo de usuario</option>
+                    <option value="v1">Vendedor1</option>
+                    <option value="v2">Vendedor2</option>
+                    <option value="v3">Vendedor3</option>
+                    </select>
+                    <label class="placeholder">Tipo de usuario*</label>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="checkbox1">
+                    <label for="checkbox1">
+                        <svg viewBox="0 0 35.6 35.6">
+                            <circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
+                            <circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
+                            <polyline class="check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
+                        </svg>
+                        <span class="checkbox-label">Puede tener clientes</span>
+                    </label>
+                </div>
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="checkbox2">
+                    <label for="checkbox2">
+                        <svg viewBox="0 0 35.6 35.6">
+                            <circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
+                            <circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
+                            <polyline class="check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
+                        </svg>
+                        <span class="checkbox-label">Puede agregar usuarios</span>
+                    </label>
+                </div>
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="checkbox3">
+                    <label for="checkbox3">
+                        <svg viewBox="0 0 35.6 35.6">
+                            <circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
+                            <circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
+                            <polyline class="check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
+                        </svg>
+                        <span class="checkbox-label">Puede vender servicios</span>
+                    </label>
+                </div>
+            </div>                                  
+            <div class="form-row">
+                <div class="input-wrapperbtn">
+                    <button class="cssbuttons-io-button" type="submit" [disabled]="!camposCompletos">
+                    <span>Aceptar</span>
+                    </button>
+                </div>
+                <div class="input-wrapperbtn">
+                    <button class="btnregresar" type="button" (click)="volverPagina()">
+                    <span>Regresar</span>
+                    </button>
+                </div>
+                <div class="input-wrapperbtn">
+                    <button class="btneliminar" type="button">
+                    <span>Eliminar</span>
+                    </button>
+                </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,275 @@
+.container {
+    width: 100%;
+    height: 100%;
+    margin-top: 100px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    height: 20vh;
+}
+
+.row fa-icon {
+    margin-right: 5px; 
+}
+
+h1 {
+    font-family: 'Arial', sans-serif; 
+    color: #fff; 
+    background-color: #371559;  
+    border-radius: 20px; 
+    padding: 20px 40px; 
+    text-align: center; 
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.form-row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.input-wrapper {
+    position: relative;
+    margin-top: 30px;   
+    width: 22%;
+    margin-right: 10px;
+}
+
+.input-wrapperbtn {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    width: 30%;
+    margin-right: 10px;
+}
+
+.input {
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    border: 2px #323232 solid;
+    padding: 5px 15px;
+    background-color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.input:focus + .placeholder,
+.input:not(:placeholder-shown) + .placeholder {
+    opacity: 1;
+}
+
+.placeholder {
+    position: absolute;
+    top: -18px;
+    left: 15px;
+    z-index: 2;
+    color: blueviolet;
+    background-color: #ffffff;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    transition: all 0.3s;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.input::placeholder {
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.input:focus {
+    outline: 2px solid blueviolet;
+    border: none;
+    color: blueviolet;
+}
+
+.input:focus::placeholder {
+    opacity: 0;
+}
+
+.cssbuttons-io-button {
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 17px;
+    padding: 0.8em 1.5em 0.8em 1.2em;
+    color: white;
+    background: linear-gradient(0deg, rgba(0, 128, 0, 1) 0%, rgba(0, 255, 0, 1) 100%);
+    border: none;
+    box-shadow: 0 0.8em 1.5em -0.5em #4d36d0be;
+    letter-spacing: 0.05em;
+    border-radius: 20em;
+}
+
+.cssbuttons-io-button:hover {
+    box-shadow: 0 0.5em 1.5em -0.5em #4d36d0be;
+}
+
+.cssbuttons-io-button:active {
+    box-shadow: 0 0.3em 1em -0.5em #4d36d0be;
+    transform: translateY(0.1em);
+}
+
+.cssbuttons-io-button[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.cssbuttons-io-button:not([disabled]) {
+    background: linear-gradient(0deg, rgba(0, 128, 0, 1) 0%, rgba(0, 255, 0, 1) 100%);
+    box-shadow: 0 0.8em 1.5em -0.5em #4d36d0be;
+}
+
+.cssbuttons-io-button:not([disabled]) span {
+    color: white; 
+}
+
+.cssbuttons-io-button[disabled] span {
+    color: #ccc; 
+}
+
+.btnregresar {
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 17px;
+    padding: 0.8em 1.5em 0.8em 1.2em;
+    color: white;
+    background: linear-gradient(0deg, rgba(255, 215, 0, 1) 0%, rgba(218, 165, 32, 1) 100%);
+    border: none;
+    box-shadow: 0 0.8em 1.5em -0.5em #4d36d0be;
+    letter-spacing: 0.05em;
+    border-radius: 20em;
+}
+
+.btnregresar:hover {
+    box-shadow: 0 0.5em 1.5em -0.5em #4d36d0be;
+}
+
+.btnregresar:active {
+    box-shadow: 0 0.3em 1em -0.5em #4d36d0be;
+    transform: translateY(0.1em);
+}
+
+.btneliminar {
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 17px;
+    padding: 0.8em 1.5em 0.8em 1.2em;
+    color: white;
+    background: linear-gradient(0deg, rgba(255, 0, 0, 1) 0%, rgba(220, 20, 60, 1) 100%);
+    border: none;
+    box-shadow: 0 0.8em 1.5em -0.5em #4d36d0be;
+    letter-spacing: 0.05em;
+    border-radius: 20em;
+}
+
+.btneliminar:hover {
+    box-shadow: 0 0.5em 1.5em -0.5em #4d36d0be;
+}
+
+.btneliminar:active {
+    box-shadow: 0 0.3em 1em -0.5em #4d36d0be;
+    transform: translateY(0.1em);
+}
+
+form {
+    width: 100%;
+}
+
+.required-asterisk {
+    color: red;
+    margin-left: 5px;
+}
+
+.checkbox-wrapper:hover .check {
+    stroke-dashoffset: 0;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    margin-right: 20px;
+}
+
+.checkbox-wrapper label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.checkbox-wrapper svg {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.checkbox-wrapper .background {
+    fill: rgb(75, 50, 121);
+    transition: ease all 0.6s;
+}
+
+.checkbox-wrapper .stroke {
+    fill: none;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    stroke-width: 2px;
+    stroke-dashoffset: 100;
+    stroke-dasharray: 100;
+    transition: ease all 0.6s;
+}
+
+.checkbox-wrapper .check {
+    fill: none;
+    stroke: #fff;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2px;
+    stroke-dashoffset: 22;
+    stroke-dasharray: 22;
+    transition: ease all 0.6s;
+}
+
+.checkbox-wrapper input[type=checkbox] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.checkbox-wrapper input[type=checkbox]:checked + label svg .background {
+    fill: #421c64;
+}
+
+.checkbox-wrapper input[type=checkbox]:checked + label svg .stroke {
+    stroke-dashoffset: 0;
+}
+
+.checkbox-wrapper input[type=checkbox]:checked + label svg .check {
+    stroke-dashoffset: 0;
+}
+
+.checkbox-label {
+    font-size: 16px;
+    color: #000;
+    white-space: nowrap;
+}

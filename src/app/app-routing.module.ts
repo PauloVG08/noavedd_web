@@ -11,6 +11,8 @@ import { EstadoTransaccionServiciosComponent } from './servicios/estado-transacc
 import { UsuariosComponent } from './vistas_usuarios/usuarios/usuarios.component';
 import { EditarUsuarioComponent } from './vistas_usuarios/editar-usuario/editar-usuario.component';
 import { ClientesComponent } from './vistas_clientes/clientes/clientes.component';
+import { EditarClienteComponent } from './vistas_clientes/editar-cliente/editar-cliente.component';
+import { ConectoresComponent } from './conectores/conectores.component';
 
 const routes: Routes = [
     { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -24,7 +26,9 @@ const routes: Routes = [
     { path: 'estado-servicios', component: EstadoTransaccionServiciosComponent },
     { path: 'usuarios', component: UsuariosComponent },
     { path: 'editar-usuario', component: EditarUsuarioComponent },
-    { path: 'clientes', component: ClientesComponent }
+    { path: 'clientes', component: ClientesComponent },
+    { path: 'editar-cliente', component: EditarClienteComponent },
+    { path: 'conectores', component: ConectoresComponent },
 ];
 
 @NgModule({
