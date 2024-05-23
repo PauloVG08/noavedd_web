@@ -1,1 +1,35 @@
-<p>cambiar-contrasenia works!</p>
+<div class="container">
+    <div class="row">
+        <h1><fa-icon [icon]="faKey"></fa-icon> Cambiar contraseña</h1>
+    </div>
+</div>
+<div class="form-container">
+    <form (ngSubmit)="onSubmit()" novalidate>
+        <div class="form-row">
+            <div class="input-wrapper">
+                <input type="text" placeholder="Contraseña actual*" name="cont_actual" class="input" [(ngModel)]="cont_actual" (input)="validarCampos()">
+                <label class="placeholder">Contraseña actual</label>
+            </div>
+            <div class="input-wrapper">
+                    <input type="text" placeholder="Nueva contraseña*" name="nueva_contrasenia" class="input" [(ngModel)]="nueva_contrasenia" (input)="validarCampos()">
+                    <label class="placeholder">Nueva contraseña</label>
+            </div>
+            <div class="input-wrapper">
+                <div class="password-input">
+                    <input type="password" placeholder="Repetir nueva contraseña*" name="rep_contrasenia" class="input" [(ngModel)]="rep_contrasenia" (input)="validarCampos()">
+                    <label class="placeholder">Repetir nueva contraseña</label>
+                    <span class="password-toggle" (click)="togglePasswordVisibility('rep_contrasenia')">
+                        <fa-icon [icon]="showPassword ? faEyeSlash : faEye"></fa-icon>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="input-wrapperbtn">
+                <button class="cssbuttons-io-button" type="submit" [disabled]="!camposCompletos">
+                    <span>Aceptar</span>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

@@ -125,5 +125,4 @@ export class VistaPagosComponent {
         }
         this.paginatedPagos = filteredPagos.slice(0, this.rowsPerPage);
     }
-    
 }
