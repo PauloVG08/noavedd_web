@@ -32,6 +32,8 @@ import { ClientesComponent } from './vistas_clientes/clientes/clientes.component
 import { EditarClienteComponent } from './vistas_clientes/editar-cliente/editar-cliente.component';
 import { ConectoresComponent } from './conectores/conectores.component';
 import { ModulosComponent } from './modulos/modulos.component';
+import { VistaPagosComponent } from './pagos/vista-pagos/vista-pagos.component';
+import { CambiarContraseniaComponent } from './cambiar-contrasenia/cambiar-contrasenia.component';
 
 @NgModule({
     declarations: [
@@ -51,6 +53,8 @@ import { ModulosComponent } from './modulos/modulos.component';
         EditarClienteComponent,
         ConectoresComponent,
         ModulosComponent,
+        VistaPagosComponent,
+        CambiarContraseniaComponent,
     ],
     imports: [
         BrowserModule,

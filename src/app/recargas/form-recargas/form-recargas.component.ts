@@ -7,14 +7,21 @@ import { Router } from '@angular/router';
     styleUrls: ['./form-recargas.component.scss']
 })
 export class FormRecargasComponent {
+    public compania: string;
+
+    constructor(private router: Router) {
+        const navigation = this.router.getCurrentNavigation();
+        const state = navigation?.extras.state as { compania: string };
+        this.compania = state?.compania;
+        console.log('Compania:', this.compania);
+    }
+
     camposCompletos: boolean = false;
     producto: string = '';
     numero: string = '';
     confirmarNumero: string = '';
     monto: string = '';
     paqueteSeleccionado: string = '';
-
-    constructor(private router: Router) {}
 
     ngOnInit() {
         this.validarCampos();

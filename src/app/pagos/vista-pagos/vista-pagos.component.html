@@ -1,0 +1,78 @@
+<div class="container">
+    <div class="row">
+        <h1><fa-icon [icon]="faDollarSign"></fa-icon> Notificaciones de Deposito/Pago De Mis Clientes</h1>
+    </div>
+</div>
+
+<div class="card shadow mb-4 mx-3 justify-content-center" id="spacesTable">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold"><fa-icon [icon]="faDollarSign"></fa-icon> Listado de pagos</h6>
+    </div>
+    <div class="card-body">
+        <div class="campos">
+            <fa-icon [icon]="faSearch"></fa-icon><input type="text" id="searchInput" class="form-control" placeholder="Buscar...">
+            <select [(ngModel)]="rowsPerPage" class="form-control" (change)="updateTable()" id="searchRows">
+                <option *ngFor="let option of rowsPerPageOptions" [value]="option">{{ option }}</option>
+            </select>
+            <ul class="example-2">
+                <li class="icon-content">
+                    <a href="#" aria-label="Agregar" data-social="agregar">
+                        <div class="filled"></div>
+                        <fa-icon [icon]="faDollarSign"></fa-icon>
+                    </a>
+                    <div class="tooltip">Pagar todo</div>
+                </li>
+            </ul>
+        </div>
+        <div class="scrollable-table" style="overflow: auto; max-height: calc(100vh - 40px);">
+            <div class="row mb-3">
+                <table id="usuariosTable" class="table table-striped">
+                    <thead>
+                        <tr class="text-center">
+                            <th>Id</th>
+                            <th>Registrado En</th>
+                            <th>Fecha pago</th>
+                            <th>Monto</th>
+                            <th>Cliente</th>
+                            <th>Oper</th>
+                            <th>Banco</th>
+                            <th>Forma pago</th>
+                            <th>Cuenta</th>
+                            <th>Referencia</th>
+                            <th>Estado</th>
+                            <th>Validador</th>
+                            <th>Pagar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let pago of paginatedPagos" class="text-center alig-items-center justify-content-center">
+                            <td>{{ pago.id }}</td>
+                            <td>{{ pago.registradoEn }}</td>
+                            <td>{{ pago.fechaPago }}</td>
+                            <td>{{ pago.monto | currency }}</td>
+                            <td>{{ pago.cliente }}</td>
+                            <td>{{ pago.oper }}</td>
+                            <td>{{ pago.banco }}</td>
+                            <td>{{ pago.formaPago }}</td>
+                            <td>{{ pago.cuenta }}</td>
+                            <td>{{ pago.referencia }}</td>
+                            <td>{{ pago.estado }}</td>
+                            <td>{{ pago.validador }}</td>
+                            <td class="toggle-cell">
+                                <ul class="example-2">
+                                    <li class="icon-content">
+                                        <a href="#" aria-label="Agregar" data-social="agregar">
+                                            <div class="filled"></div>
+                                            <fa-icon [icon]="faPlus"></fa-icon>
+                                        </a>
+                                        <div class="tooltip">Pagar</div>
+                                    </li>
+                                </ul>
+                            </td>                     
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

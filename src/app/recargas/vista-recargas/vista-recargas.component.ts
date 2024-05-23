@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, NavigationExtras } from '@angular/router';
 import { IconService } from 'src/app/servers/icon.service';
 
 @Component({
@@ -12,7 +12,14 @@ export class VistaRecargasComponent {
 
     faMobileAlt = this.iconService.getIcon('faMobileAlt');
 
+    ngOnInit() { }
+
     redirectToFormRecargas() {
-        this.router.navigate(['/formrecargas']);
+        const navigationExtras: NavigationExtras = {
+            state: { compania: 'Telcel',
+                    saldo: 100,
+            }
+        };
+        this.router.navigate(['/formrecargas'], navigationExtras);
     }
 }

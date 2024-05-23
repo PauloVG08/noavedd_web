@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { IconDefinition, faMobileAlt, faPencilAlt, faSearch, faUser, faTrashAlt, faMoneyBill1Wave, faPlug, faCreditCard, faPlus,
-    faCubes
- } from '@fortawesome/free-solid-svg-icons';
+    faCubes, faDollarSign } from '@fortawesome/free-solid-svg-icons';
 
 @Injectable({
     providedIn: 'root'
@@ -17,7 +16,8 @@ export class IconService {
         faPlug,
         faCreditCard,
         faPlus,
-        faCubes
+        faCubes,
+        faDollarSign
     };
 
     getIcon(name: string): IconDefinition {
