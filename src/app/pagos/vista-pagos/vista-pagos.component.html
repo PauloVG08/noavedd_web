@@ -4,7 +4,7 @@
     </div>
 </div>
 
-<div class="card shadow mb-4 mx-3 justify-content-center" id="spacesTable">
+<div class="card shadow mb-4 mx-3 justify-content-center" style="max-height: 800px" id="spacesTable">
     <div class="card-header py-3">
         <h6 class="m-0 font-weight-bold"><fa-icon [icon]="faDollarSign"></fa-icon> Listado de pagos</h6>
     </div>
@@ -24,7 +24,7 @@
                 </li>
             </ul>
         </div>
-        <div class="scrollable-table" style="overflow: auto; max-height: calc(100vh - 40px);">
+        <div class="scrollable-table" style="overflow: auto; height: 400px;">
             <div class="row mb-3">
                 <table id="usuariosTable" class="table table-striped">
                     <thead>
@@ -45,7 +45,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let pago of paginatedPagos" class="text-center alig-items-center justify-content-center">
+                        <tr *ngFor="let pago of paginatedPagos" class="text-center align-items-center justify-content-center">
                             <td>{{ pago.id }}</td>
                             <td>{{ pago.registradoEn }}</td>
                             <td>{{ pago.fechaPago }}</td>

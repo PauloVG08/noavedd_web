@@ -151,3 +151,8 @@ button:active {
     padding: 24px;
     width: 100%;
 }
+
+.scrollable-table {
+    overflow: auto;
+    max-height: calc(100vh - 200px);
+}
